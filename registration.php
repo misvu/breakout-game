@@ -11,8 +11,8 @@
 include('functions.php');
 
 //Output header and navigation
-outputHeader("My Game Website - Registration");
-outputBannerNavigation("Registration");
+outputHeader("Registration");
+outputBannerNavigation("registration");
 ?>
 
     <!-- Contents of the page -->

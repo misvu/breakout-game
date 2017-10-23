@@ -11,12 +11,12 @@
 include('functions.php');
 
 //Output header and navigation
-outputHeader("Login");
-outputBannerNavigation("login");
+outputHeader("About");
+outputBannerNavigation("about");
 ?>
 
     <!-- Contents of the page -->
-    <h1>This is the registration page</h1>
+    <h1>This is the about page</h1>
 
 <?php
 //Output the footer
