@@ -3,12 +3,12 @@
 include('functions.php');
 
 outputHeader("Play");
-outputBannerNavigation("play");
+outputHeaderNavigation("Play");
 ?>
 
     <!-- Contents of the page -->
 
-        <canvas id="canvas" width="600" height="550"></canvas>
+        <canvas id="canvas" width="600" height="450"></canvas>
 
 
 

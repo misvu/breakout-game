@@ -8,10 +8,8 @@ window.onload = function() {
     var y = canvas.height - 30;
     var dx = -2;
     var dy = -2;
-    var rightPressed = false;
-    var leftPressed = false;
 
-    var scoreBoardHeight = 40;
+    var scoreBoardHeight = 35;
     var paddleWidth = 75;
     var paddleHeight = 10;
     var paddleX = (canvas.width - paddleWidth) / 2;
