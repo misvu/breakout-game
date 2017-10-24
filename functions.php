@@ -1,10 +1,6 @@
 <?php
-/**
- * Date: 07/10/2017
- * Time: 17:04
- */
 
-//Ouputs the header for the page and opening body tag
+//Outputs the header for the page and opening body tag
 function outputHeader($title){
     echo '<!DOCTYPE html>';
     echo '<html lang="en">';
@@ -25,27 +21,22 @@ function outputHeader($title){
 }
 
 
-/* Outputs header containing the web site logo and site navigation bar.
-    The selected class is applied to the page that matches the page name variable */
+/* Outputs header containing the web site logo and site navigation bar. */
 function outputHeaderNavigation($pageName){
     echo '<div class="banner">BRICKMANIA</div>';
-    echo '<nav>';
-
-    //Array of pages to link to
-    $linkNames = array("Play", "About", "Levels", "Rankings");
-    $linkAddresses = array("index.php", "about.php", "levels.php", "rankings.php");
 
     //Outputs the navigation
-    echo '<ul>';
-    for($x = 0; $x < count($linkNames); $x++){
-        echo '<li><a ';
-        if($linkNames[$x] == $pageName){
-            echo 'class="selected" ';
-        }
-        echo 'href="' . $linkAddresses[$x] . '">' . $linkNames[$x] . '</a></li>';
-    }
-    echo '</ul>';
+    echo '<nav id="mySidenav" class="sidenav">';
+    echo '<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>';
+    echo '<a href="index.php">Play</a>';
+    echo '<a href="about.php">About</a>';
+    echo '<a href="levels.php">Levels</a>';
+    echo '<a href="rankings.php">Rankings</a>';
     echo '</nav>';
+
+   //open the side Menu
+    echo '<span id="menuIcon" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>';
+
     echo '</header>';
 }
 

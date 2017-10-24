@@ -11,7 +11,6 @@ outputHeaderNavigation("Play");
         <canvas id="canvas" width="600" height="450"></canvas>
 
 
-
 <?php
 outputFooter();
 ?>
