@@ -2,7 +2,7 @@
 
 include('functions.php');
 
-outputHeader("Play");
+outputHeader("Play", $loggedIn);
 outputHeaderNavigation();
 outputLoginPane();
 ?>
@@ -22,8 +22,6 @@ outputLoginPane();
             </div>
 
          </div>
-
-
 
 
 

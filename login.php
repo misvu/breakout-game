@@ -6,9 +6,9 @@
  * Time: 17:13
  */
 
-
 //Include the PHP functions to be used on the page
 include('functions.php');
+
 
 //Output header and navigation
 outputHeader("Login");

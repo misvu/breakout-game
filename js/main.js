@@ -77,7 +77,8 @@ window.onload = function() {
 
 /* ----- SITE NAVIGATION ----- */
 
-/*Set the width of the side navigation to 250px */
+
+
 function openNav() {
     document.getElementById("mySideNav").style.width = "250px";
 }
@@ -95,3 +96,24 @@ function openLogNav() {
 function closeLogNav() {
     document.getElementById("loginRegPane").style.width = "0";
 }
+
+
+
+
+
+
+/*Set the width of the side navigation to 250px */
+
+
+/*
+
+function openNav() {
+    document.getElementsByClassName("mySideNav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementsByClassName("mySideNav").style.width = "0";
+}
+
+
+*/
