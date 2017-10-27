@@ -1,0 +1,161 @@
+#pageContainer{
+    width: 100%;
+    margin-top: 150px;
+
+}
+
+.container-fluid{
+
+}
+
+
+header{
+
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 150px;
+    background-color: white;
+}
+
+header .banner{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 80px;
+}
+
+header #menuIcon {
+    padding-top: 20px;
+    padding-left: 10px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+
+.col-sm-6{
+    text-align: center;
+}
+
+.col-sm-3 #loginRegister {
+    color: black;
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.col-sm-3 a{
+    color: black;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+     height: 100%; /* 100% Full-height */
+     width: 0; /* 0 width - change this with JavaScript */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Stay on top */
+     top: 0;
+     left: 0;
+     background-color: #111; /* Black*/
+     overflow-x: hidden; /* Disable horizontal scroll */
+     padding-top: 60px; /* Place content 60px from the top */
+     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+ }
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+/* Login and Register side pane */
+
+.loginNav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+
+.loginNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.loginNav a:hover {
+    color: #f1f1f1;
+}
+
+.loginNav .closeLogReg {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+
+
+/*board game*/
+canvas{
+    background-color: red;
+    display: inline;
+}
+
+
+
+/*Footer*/
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+body{
+
+}
+
+
+
+
+
+
+

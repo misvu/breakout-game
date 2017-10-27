@@ -12,7 +12,8 @@ include('functions.php');
 
 //Output header and navigation
 outputHeader("Login");
-outputBannerNavigation("login");
+outputHeaderNavigation();
+outputLoginPane();
 ?>
 
     <!-- Contents of the page -->

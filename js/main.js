@@ -79,10 +79,19 @@ window.onload = function() {
 
 /*Set the width of the side navigation to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySideNav").style.width = "250px";
 }
 
 /* Set the width of the side navigation to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySideNav").style.width = "0";
+}
+
+function openLogNav() {
+    document.getElementById("loginRegPane").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeLogNav() {
+    document.getElementById("loginRegPane").style.width = "0";
 }
