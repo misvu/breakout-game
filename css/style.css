@@ -1,6 +1,18 @@
+body{
+    background-image: url('../static/images/background.jpg');
+    background-size: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: white;
+}
+
+
 #pageContainer{
     width: 100%;
-    margin-top: 150px;
+    margin-top: 20px;
 }
 
 .container-fluid{
@@ -8,54 +20,92 @@
 
 
 header{
-    /*overflow: hidden;*/
-    position: fixed;
     top: 0;
     width: 100%;
     height: 150px;
 }
 
-header #banner{
+header .banner{
     font-family: 'Archivo Black', sans-serif;
     font-size: 80px;
 }
 
+.banner shake:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes spaceboots {
+    0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+    10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+    30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+    40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+    50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+    70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+    80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+    90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+    100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake:hover,
+.shake:focus {
+    -webkit-animation-name: spaceboots;
+    -webkit-animation-duration: 0.8s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
 header #menuIcon {
-    padding-top: 20px;
-    padding-left: 10px;
+    padding-top: 10px;
+    padding-left: 50px;
     font-size: 40px;
     cursor: pointer;
 }
 
+header .menuText {
+    font-size: 14px;
+}
+
+
+h1{
+    font-size: 10px;
+    font-weight: bold;
+    padding: 20px;
+
+}
 
 .col-sm-6{
     text-align: center;
 }
 
-.col-sm-3 #loginRegister {
-    color: black;
-    padding-top: 50px;
-    padding-left: 100px;
+.col-sm-3 #login {
+    color: #23272b;
+    padding-top: 40px;
+    padding-left: 140px;
 }
 
 .col-sm-3 a{
     color: black;
-}
 
+}
 
 
 /* The side navigation menu */
 .sidenav {
-     height: 100%; /* 100% Full-height */
-     width: 0; /* 0 width - change this with JavaScript */
-     position: fixed; /* Stay in place */
-     z-index: 1; /* Stay on top */
+     height: 100%;
+     width: 0;
+     position: fixed;
+     z-index: 1;
      top: 0;
-    /* left: 0; */
-     background-color: #111; /* Black*/
-     overflow-x: hidden; /* Disable horizontal scroll */
-     padding-top: 60px; /* Place content 60px from the top */
-     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+     background-color: black;
+     overflow-x: hidden;
+     padding-top: 60px;
+     transition: 0.5s;
  }
 
 
@@ -66,7 +116,6 @@ header #menuIcon {
 .sidenav.loginNav{
     right: 0;
 }
-
 
 
 /* The navigation menu links */
@@ -98,12 +147,60 @@ header #menuIcon {
     cursor: pointer;
 }
 
+.form-group{
+    color: white;
+}
 
+/* Button */
+.btn.btn-success {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.btn.btn-success a:hover{
+    opacity: 0.5;
+}
+
+/* About section  */
+.about{
+    margin-top: 40px;
+    height: 300px;
+}
 
 /* Game canvas */
 canvas{
-    background-color: red;
+    background-color: #ffc107;
+    background-size: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     display: inline;
+}
+/* Ranking table */
+.rankingtable{
+    width: 550px;
+    height: 500px;
+    color: white;
+    background-color: black;
+    background:rgba(0,0,0,0.5);
+    border-radius: 25px;
+    margin: auto;
+    font-size: 30px;
+}
+
+.rankingtable table{
+    margin: auto;
+}
+
+td, th {
+    padding: 10px 30px;
+}
+
+th{
+    padding-top: 50px;
 }
 
 
@@ -112,12 +209,35 @@ canvas{
 footer{
     width: 100%;
     height: 200px;
-    background-color: white;
+    margin-top: 50px;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 
+/* Fade in */
 
+p, h1{
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 3s;
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
 
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
 
-
-
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}

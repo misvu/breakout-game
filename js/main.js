@@ -17,7 +17,7 @@ window.onload = function() {
     function drawBall() {
         ctx.beginPath();
         ctx.arc(x, y, ballRadius, 0, Math.PI * 2, false);
-        ctx.fillStyle = "white";
+        ctx.fillStyle = "black";
         ctx.fill();
         ctx.closePath();
     }
@@ -97,23 +97,3 @@ function closeLogNav() {
     document.getElementById("loginRegPane").style.width = "0";
 }
 
-
-
-
-
-
-/*Set the width of the side navigation to 250px */
-
-
-/*
-
-function openNav() {
-    document.getElementsByClassName("mySideNav").style.width = "250px";
-}
-
-function closeNav() {
-    document.getElementsByClassName("mySideNav").style.width = "0";
-}
-
-
-*/

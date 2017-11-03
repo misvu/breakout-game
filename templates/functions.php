@@ -14,12 +14,12 @@ function outputHeader($title, $loggedIn){
     echo '<meta name="description" content="Home for game website .....">';
     echo '<meta name="keywords" content="game, school project">';
     echo '<meta name="author" content="Anna Mary Vu">';
-    echo '<link href="css/style.css" rel="stylesheet" >';
-    echo '<link href="css/bootstrap.min.css" rel="stylesheet">';
-    echo '<link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">';
+    echo '<link href="../css/style.css" rel="stylesheet" >';
+    echo '<link href="../css/bootstrap.min.css" rel="stylesheet">';
+    echo '<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Gloria+Hallelujah" rel="stylesheet">';
     echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>';
-    echo '<script src="js/main.js"></script>';
-    echo ' <script src="js/bootstrap.min.js"></script>';
+    echo '<script src="../js/main.js"></script>';
+    echo ' <script src="../js/bootstrap.min.js"></script>';
     echo '</head>';
 
     /* <body> */
@@ -31,17 +31,20 @@ function outputHeader($title, $loggedIn){
     echo '<div class="container-fluid">';
     echo '<div class="row">';
     echo '<div class="col-sm-3">';
-    echo '<div id="menuIcon" onclick="openNav()">&#9776;</div>';
+    echo '<div id="menuIcon" onclick="openNav()"><div class="menuText">MENU</div>&#9776;</div>';
     echo '</div>';
     echo '<div class="col-sm-6">';
-    echo '<div id="banner">BRICKMANIA</div>';
+    if ($page_title = 'index'){
+        echo '<div class="banner shake">BRICKMANIA</div>';
+    }
+
     echo '</div>';
     echo '<div class="col-sm-3">';
 
     if ($loggedIn){
         echo '<div id="loggedIn"><span>Logged in as you!</span></div>';
     }else{
-        echo '<div id="loginRegister"><span class="pointer" onclick="openLogNav()">Login</span><span> | </span> <span class="pointer" onclick="openLogNav()">Register</span></div>';
+        echo '<div id="login"><span class="pointer" onclick="openLogNav()"> <button type="button" class="btn btn-success">Login</button></span>';
     }
 
     echo '</div>';
@@ -64,7 +67,6 @@ function outputHeaderNavigation(){
 
 function outputLoginPane(){
 
-
     echo '<nav id="loginRegPane" class="sidenav loginNav">';
     echo '<a href="javascript:void(0)" class="closebtn" onclick="closeLogNav()">&times;</a>';
     echo '<div class="form-group">';
@@ -84,10 +86,20 @@ function outputLoginPane(){
 //Outputs footer section and closing body and HTML tag
 function outputFooter(){
     echo '<footer>';
-    echo '<p>Copyright &copy; 2017</p>';
+    echo '<div class="row">';
+    echo '<div class="col-sm-3">';
+    echo '</div>';
+    echo '<div class="col-sm-6">';
+    echo '<p>Brickmania by <br>Anna Vu</p>';
+    echo '</div>';
+    echo '<div class="col-sm-3">';
+    echo '</div>';
+    echo '</div>'; //end of .row
     echo '</footer>';
+
     echo '</div>'; // end of .container-fluid
     echo '</div>'; // end of .pageContainer
+
     echo '</body>';
     echo '</html>';
 }

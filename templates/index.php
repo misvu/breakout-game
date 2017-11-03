@@ -2,13 +2,13 @@
 
 include('functions.php');
 
-outputHeader("Play", $loggedIn);
+outputHeader("Play", false);
 outputHeaderNavigation();
 outputLoginPane();
 ?>
 
     <!-- Contents of the page -->
-         <div class="row">
+         <div class="row" style="height: 500px">
 
             <div class="col-sm-3">
 
