@@ -1,7 +1,10 @@
 <?php
 
+//Include the PHP functions to be used on the page
 include('functions.php');
 
+
+//Output header, navigation and login pane
 outputHeader("Play", false);
 outputHeaderNavigation();
 outputLoginPane();

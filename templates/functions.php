@@ -11,8 +11,8 @@ function outputHeader($title, $loggedIn){
     echo '<head>';
     echo '<title>' . $title . '</title>';
     echo '<meta charset="UTF-8">';
-    echo '<meta name="description" content="Home for game website .....">';
-    echo '<meta name="keywords" content="game, school project">';
+    echo '<meta name="description" content="A breakout game called Brickmania">';
+    echo '<meta name="keywords" content="breakout game, BrickMania">';
     echo '<meta name="author" content="Anna Mary Vu">';
     echo '<link href="../css/style.css" rel="stylesheet" >';
     echo '<link href="../css/bootstrap.min.css" rel="stylesheet">';
@@ -62,6 +62,7 @@ function outputHeaderNavigation(){
     echo '<a href="about.php">About</a>';
     echo '<a href="levels.php">Levels</a>';
     echo '<a href="rankings.php">Rankings</a>';
+    echo '<a href="registration.php">Register</a>';
     echo '</nav>';
 }
 

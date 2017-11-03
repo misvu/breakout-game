@@ -1,15 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: A
- * Date: 07/10/2017
- * Time: 17:13
- */
-
 
 //Include the PHP functions to be used on the page
 include('functions.php');
 
+//Output header, navigation and login pane
 outputHeader("Play", false);
 outputHeaderNavigation();
 outputLoginPane();

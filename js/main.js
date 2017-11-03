@@ -77,8 +77,6 @@ window.onload = function() {
 
 /* ----- SITE NAVIGATION ----- */
 
-
-
 function openNav() {
     document.getElementById("mySideNav").style.width = "250px";
 }
