@@ -4,8 +4,8 @@
 include('functions.php');
 
 //Output header, navigation and login pane
-outputHeader("Rankings", false);
-outputHEaderNavigation("rankings");
+outputHeader("Rankings", $_COOKIE["loggedInUser"]);
+outputHeaderNavigation("rankings");
 outputLoginPane();
 ?>
 

@@ -4,7 +4,7 @@
 include('functions.php');
 
 //Output header, navigation and login pane
-outputHeader("Play", false);
+outputHeader("Play", $loggedInUser);
 outputHeaderNavigation();
 outputLoginPane();
 ?>

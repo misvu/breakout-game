@@ -5,7 +5,7 @@ include('functions.php');
 
 
 //Output header, navigation and login pane
-outputHeader("Play", false);
+outputHeader("Play", $loggedInUser);
 outputHeaderNavigation();
 outputLoginPane();
 ?>
@@ -18,7 +18,14 @@ outputLoginPane();
             </div>
 
             <div class="col-sm-6">
-                  <canvas id="canvas" width="600" height="450"></canvas>
+                <?php
+                  if($loggedInUser != null){
+                      echo '<div id="scoreboard" width="600" height="20" style="background-color: red">SCORE: 0</div>';
+                      echo '<canvas id="canvas" width="600" height="450"></canvas>';
+                  }else{
+                      echo '<div>Login to play game!</div>';
+                  }
+                ?>
              </div>
 
             <div class="col-sm-3">

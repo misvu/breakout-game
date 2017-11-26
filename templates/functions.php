@@ -1,9 +1,8 @@
 <?php
 
-$loggedIn = false;
-
+$loggedInUser = isset($_COOKIE["loggedInUser"]) && strlen($_COOKIE["loggedInUser"]) > 0 ? $_COOKIE["loggedInUser"] : null;
 //Outputs the opening body tag and the header for the page
-function outputHeader($title, $loggedIn){
+function outputHeader($title, $loggedInUser){
     echo '<!DOCTYPE html>';
     echo '<html lang="en">';
 
@@ -17,9 +16,12 @@ function outputHeader($title, $loggedIn){
     echo '<link href="../css/style.css" rel="stylesheet" >';
     echo '<link href="../css/bootstrap.min.css" rel="stylesheet">';
     echo '<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Gloria+Hallelujah" rel="stylesheet">';
-    echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>';
-    echo '<script src="../js/main.js"></script>';
+    echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>';
     echo ' <script src="../js/bootstrap.min.js"></script>';
+    echo '<script src="../js/main.js"></script>';
+
+
+
     echo '</head>';
 
     /* <body> */
@@ -40,9 +42,10 @@ function outputHeader($title, $loggedIn){
 
     echo '</div>';
     echo '<div class="col-sm-3">';
-
-    if ($loggedIn){
-        echo '<div id="loggedIn"><span>Logged in as you!</span></div>';
+    if ($loggedInUser != null){
+        echo '<div id="login"><span>Logged in as ' . $loggedInUser . '</span>';
+        echo '<div><button type=button id="logout" class="btn btn-success" onclick="logout()">Log out</button></div> ';
+        echo '</div>';
     }else{
         echo '<div id="login"><span class="pointer" onclick="openLogNav()"> <button type="button" class="btn btn-success">Login</button></span>';
     }
@@ -71,14 +74,15 @@ function outputLoginPane(){
     echo '<nav id="loginRegPane" class="sidenav loginNav">';
     echo '<a href="javascript:void(0)" class="closebtn" onclick="closeLogNav()">&times;</a>';
     echo '<div class="form-group">';
-    echo '<label for="username">Username:</label>';
-    echo '<input type="text" class="form-control" id="username">';
+    echo '<label for="user">Username:</label>';
+    echo '<input type="text" class="form-control" id="user">';
     echo '</div>';
     echo '<div class="form-group">';
     echo '<label for="password">Password:</label>';
     echo '<input type="password" class="form-control" id="password">';
     echo '</div>';
-    echo '<button type="submit" class="btn btn-default">Login</button>';
+    echo '<button type="submit" onclick="login()" class="btn btn-default" id="login_user">Login</button>';
+    echo '<div id="error_container"></div>';
     echo '</nav>';
 
 }
@@ -91,7 +95,7 @@ function outputFooter(){
     echo '<div class="col-sm-3">';
     echo '</div>';
     echo '<div class="col-sm-6">';
-    echo '<p>Brickmania by <br>Anna Vu</p>';
+    echo '<p>Brickmania by<br>Anna Vu</p>';
     echo '</div>';
     echo '<div class="col-sm-3">';
     echo '</div>';
